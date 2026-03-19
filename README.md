@@ -105,7 +105,7 @@ def send_followup(to_email, template_name, delay_days=3):
     
     templates = {
         "gentle_checkin": "Just checking in to see if you had a chance to review my last email?",
-        "value_add": "I came across this article that might be relevant to our discussion: [link]  # Replace [link] with your actual article URL",
+        "value_add": "I came across this article that might be relevant to our discussion: [link]",  # Replace [link] with your actual article URL
         "breakup": "I'll assume you're busy for now and will reach out again next quarter."
     }
     
@@ -227,7 +227,8 @@ if [ -z "$CLIENT_NAME" ] || [ -z "$PROJECT_SCOPE" ] || [ -z "$PROJECT_VALUE" ]; 
   exit 1
 fi
 
-# Create output directory if it doesn't exist: mkdir -p "$OUTPUT_DIR"
+# Create output directory if it doesn't exist
+mkdir -p "$OUTPUT_DIR"
 # Use a simple template (in practice, use a real templating engine)
 cat > "$OUTPUT_DIR/${CLIENT_NAME}_proposal.txt" << EOF
 Proposal for: $CLIENT_NAME
@@ -276,7 +277,7 @@ echo "Proposal generated: $OUTPUT_DIR/${CLIENT_NAME}_proposal.txt"
 
 Remember: The goal isn't to build the perfect automation system overnight. It's to start small, prove the concept, and gradually eliminate the repetitive tasks that eat up your selling time.
 
-**Free bonus**: Want a ready-to-use version of these scripts? Check out the companion repository at [github.com/reggierexai-design/sales-automation-scripts](https://github.com/reggierexai-design/sales-automation-scripts)
+**Free bonus**: Want a ready-to-use version of these scripts? Check out the companion repository at [github.com/reggie-rex/sales-automation-scripts](https://github.com/reggie-rex/sales-automation-scripts) (example link - replace with actual if you create it)
 
 ---
 
